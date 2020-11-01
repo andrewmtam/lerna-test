@@ -1,0 +1,27 @@
+{
+  "name": "lerna-test-rook",
+  "version": "1.0.2",
+  "description": "> TODO: description",
+  "author": "Andrew Tam <andrew.tam.000@gmail.com>",
+  "homepage": "https://github.com/andrewmtam/lerna-test#readme",
+  "license": "ISC",
+  "main": "lib/rook.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewmtam/lerna-test.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/andrewmtam/lerna-test/issues"
+  },
+  "gitHead": "35031c18d7aa00fe40915517877833a02d99efe2"
+}
