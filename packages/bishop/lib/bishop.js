@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
 module.exports = bishop;
 // wow
 
 function bishop() {
-    // TODO
+  // TODO
 }
 
 // adding new feature
@@ -14,3 +14,5 @@ function bishop() {
 // breaking
 //
 // One more breaki
+//
+// More changes
