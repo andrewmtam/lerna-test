@@ -35,6 +35,3 @@ jobs:
           type: now
           from_branch: ${GITHUB_REF##*/}
           target_branch: ${GITHUB_REF##*/release_}
-      - name: Delete release branch
-        uses: dawidd6/action-delete-branch@v3
-            branches: ${GITHUB_REF##*/}
