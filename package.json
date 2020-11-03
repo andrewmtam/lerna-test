@@ -5,7 +5,7 @@
     "#version": "lerna version --no-push && git tag -d $(git describe --abbrev=0)",
     "ci:publish": "lerna publish from-package --yes",
     "publish": "lerna publish",
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap --yes"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
