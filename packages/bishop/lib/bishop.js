@@ -2,6 +2,8 @@
 
 module.exports = bishop;
 // wow
+//
+// /wtest
 
 function bishop() {
   // TODO
