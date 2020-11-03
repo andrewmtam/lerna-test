@@ -1,6 +1,7 @@
 "use strict";
 // test
 // test
+// test
 
 module.exports = bishop;
 // wow
