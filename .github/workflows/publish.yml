@@ -7,8 +7,10 @@ on:
 
 jobs:
   deploy:
-    ## Only execute on merged PR
+    ### Only execute on merged PR
     if: github.event.pull_request.merged == true
+    ### Only execute if the source branch is `release_*`
+    if: startsWith(github.head_ref, 'release_')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
