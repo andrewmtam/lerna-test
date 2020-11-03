@@ -7,7 +7,16 @@
     "ci:publish": "lerna publish from-package --yes --no-push && git push --tags && git push",
     "bootstrap": "lerna bootstrap",
     "deploy": "git checkout -b release_master && git push -u && git checkout master && git push --delete origin release_master",
-    "local:publish": "git checkout -b release_$(date +%s) && git push -u && npm run local:version"
+    "test-deploy": "git checkout -b release_master && git push -u && git checkout master && git push --delete origin release_master",
+    "local:publish": "git checkout -b release_$(date +%s) && git push -u && npm run local:version",
+    "test:publish": "git checkout -b release_$(date +%s) && git push -u && npm run local:version"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "lerna": "^3.22.1"
+  }
+}
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
