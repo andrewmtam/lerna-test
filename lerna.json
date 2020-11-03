@@ -2,12 +2,6 @@
   "packages": [
     "packages/*"
   ],
-<<<<<<< HEAD
-  "version": "10.9.4",
-||||||| parent of 1b59e70... v10.9.0
-  "version": "10.8.4",
-=======
-  "version": "10.9.0",
->>>>>>> 1b59e70... v10.9.0
+  "version": "10.9.5",
   "conventionalCommits": true
 }
