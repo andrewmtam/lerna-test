@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.24.2](https://github.com/andrewmtam/lerna-test/compare/v10.24.1...v10.24.2) (2020-11-03)
+
+**Note:** Version bump only for package lerna-test-pawn
+
+
+
+
+
 ## [10.24.1](https://github.com/andrewmtam/lerna-test/compare/v10.24.0...v10.24.1) (2020-11-03)
 
 
