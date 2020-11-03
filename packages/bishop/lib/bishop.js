@@ -24,3 +24,5 @@ function bishop() {
 // more
 //
 // mor stuff
+//
+// minor
