@@ -9,7 +9,7 @@
     "deploy": "git checkout -b release_master && git push -u && git checkout master && git push --delete origin release_master",
     "test-deploy": "git checkout -b release_master && git push -u && git checkout master && git push --delete origin release_master",
     "local:publish": "git checkout -b release_$(date +%s) && git push -u && npm run local:version",
-    "test:publish": "git checkout -b release_$(date +%s) && git push -u && npm run local:version"
+    "test:publish": "git checkout -b test_$(date +%s) && git push -u && npm run local:version"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
