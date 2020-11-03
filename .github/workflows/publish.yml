@@ -39,4 +39,6 @@ jobs:
         with:
           path: 'lerna.json'
           prop_path: 'version'
-      - run: git tag -a v${{steps.version.outputs.prop}} && git push --tags
+      ### Finally, after publishing, tag the version
+      ### We must use an annotated tag in order for lerna's versioning to work properly
+      - run: git tag -a v${{steps.version.outputs.prop}} -m v${{steps.version.outputs.prop}} && git push --tags
