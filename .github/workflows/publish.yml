@@ -39,4 +39,4 @@ jobs:
         with:
           path: 'lerna.json'
           prop_path: 'version'
-      - run: git tag v${{steps.version.outputs.prop}} -a && git push --tags
+      - run: git tag -a v${{steps.version.outputs.prop}} && git push --tags
