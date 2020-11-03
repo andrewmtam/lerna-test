@@ -13,7 +13,7 @@ jobs:
           # https://github.com/lerna/lerna/issues/2542
           # pulls all commits (needed for lerna / semantic release to correctly version)
           fetch-depth: "0"
-          ref: "${GITHUB_REF##*/}"
+          ref: \$\{GITHUB_REF##*/\}
       - name: setup node
         uses: actions/setup-node@v1
         with:
