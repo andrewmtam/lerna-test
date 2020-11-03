@@ -1,17 +1,16 @@
 name: Deploy stuff
 on:
   push:
-    branches:
-      - release_*
   create:
     branches:
-      - manual_release_*
+      - release_*
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
+          # https://github.com/lerna/lerna/issues/2542
           # pulls all commits (needed for lerna / semantic release to correctly version)
           fetch-depth: "0"
       - name: setup node
@@ -30,4 +29,12 @@ jobs:
       - run: npm run publish
         env:
             NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
+      - name: Merge bump version commit
+        uses: devmasx/merge-branch@v1.3.1
+        with:
+          type: now
+          from_branch: ${GITHUB_REF##*/}
+          target_branch: ${GITHUB_REF##*/release_}
+      - name: Delete release branch
+        uses: dawidd6/action-delete-branch@v3
+            branches: ${GITHUB_REF##*/}
