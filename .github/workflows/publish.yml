@@ -34,9 +34,9 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: get published version
-          id: version
-          uses: notiz-dev/github-action-json-property@release
-          with:
-            path: 'lerna.json'
-            prop_path: 'version'
-          - run: git tag v${{steps.version.outputs.prop}} && git push --tags
+        id: version
+        uses: notiz-dev/github-action-json-property@release
+        with:
+          path: 'lerna.json'
+          prop_path: 'version'
+      - run: git tag v${{steps.version.outputs.prop}} && git push --tags
