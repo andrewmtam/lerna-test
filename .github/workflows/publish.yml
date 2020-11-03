@@ -8,12 +8,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch_to_merge_into;]$(echo ${GITHUB_REF#refs/heads/release_})"
+        id: extract_branch
       - uses: actions/checkout@v2
         with:
           # https://github.com/lerna/lerna/issues/2542
           # pulls all commits (needed for lerna / semantic release to correctly version)
           fetch-depth: "0"
-          ref: ${{ github.ref }##*release_}
+          ref: ${{ steps.extract_branch.outputs.branch_to_merge_into }}
       - name: setup node
         uses: actions/setup-node@v1
         with:
