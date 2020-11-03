@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.24.4](https://github.com/andrewmtam/lerna-test/compare/v10.24.3...v10.24.4) (2020-11-03)
+
+**Note:** Version bump only for package lerna-test-bishop
+
+
+
+
+
 ## [10.24.3](https://github.com/andrewmtam/lerna-test/compare/v10.24.2...v10.24.3) (2020-11-03)
 
 
