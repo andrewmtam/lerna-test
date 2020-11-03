@@ -3,8 +3,7 @@
   "private": true,
   "scripts": {
     "version": "lerna version --no-push --yes && git tag -d $(git describe --abbrev=0) && git push",
-    "ci:publish": "lerna publish from-package --yes",
-    "publish": "lerna publish --yes --no-push && git push --tags && git push",
+    "ci:publish": "lerna publish from-package --yes --no-push && git push --tags && git push",
     "bootstrap": "lerna bootstrap",
     "deploy": "git checkout -b release_master && git push -u && git checkout master && git push --delete origin release_master",
     "local:publish": "git checkout -b release_$(date +%s) && git push -u && npm run version"
