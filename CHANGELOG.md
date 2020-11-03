@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.28.3](https://github.com/andrewmtam/lerna-test/compare/v10.28.2...v10.28.3) (2020-11-03)
+
+
+### Bug Fixes
+
+* fix ([5fdcb3b](https://github.com/andrewmtam/lerna-test/commit/5fdcb3b16eb134797feece767162084eefd0d369))
+
+
+
+
+
 ## [10.28.2](https://github.com/andrewmtam/lerna-test/compare/v10.28.0...v10.28.2) (2020-11-03)
 
 
