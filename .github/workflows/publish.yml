@@ -2,9 +2,9 @@ name: Deploy
 
 on:
   pull_request:
-  branches: 
-    - release_*
-  types: [closed]
+    branches:
+      - release_*
+    types: [closed]
 
 jobs:
   deploy:
