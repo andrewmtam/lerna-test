@@ -16,13 +16,8 @@ jobs:
           fetch-depth: "0"
       - name: setup node
         uses: actions/setup-node@v1
-        with:
-          # node-version: '14.8.0'
-          # always-auth: true
-          # registry-url: https://repository.mark43.io/artifactory/api/npm/npm-all/
-          #
-          # https://github.com/lerna/lerna/issues/2542
-          # pulls all tags (needed for lerna / semantic release to correctly version)
+      # https://github.com/lerna/lerna/issues/2542
+      # pulls all tags (needed for lerna / semantic release to correctly version)
       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
       - run: npm install
       - run: npm run bootstrap
