@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.2.4](https://github.com/andrewmtam/lerna-test/compare/v10.2.1...v10.2.4) (2020-11-03)
+
+
+### Bug Fixes
+
+* small thing ([7a78b64](https://github.com/andrewmtam/lerna-test/commit/7a78b6439544e099c1ad5c3c02ceb22d4d2b00cf))
+* updated bishop ([178f283](https://github.com/andrewmtam/lerna-test/commit/178f283e0adc702756029e8f03aa078e3f045702))
+
+
+
+
+
 ## [10.2.1](https://github.com/andrewmtam/lerna-test/compare/v10.2.0...v10.2.1) (2020-11-03)
 
 
