@@ -2,6 +2,6 @@
   "packages": [
     "packages/*"
   ],
-  "version": "10.28.0",
+  "version": "10.29.0",
   "conventionalCommits": true
 }
