@@ -2,11 +2,12 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "#version": "lerna version --no-push && git tag -d $(git describe --abbrev=0)",
+    "version": "lerna version --no-push && git tag -d $(git describe --abbrev=0)",
     "ci:publish": "lerna publish from-package --yes",
     "publish": "lerna publish --yes --no-push && git push --tags && git push",
     "bootstrap": "lerna bootstrap",
-    "deploy": "git checkout -b release_master && git push -u && git checkout master && git push --delete origin release_master"
+    "deploy": "git checkout -b release_master && git push -u && git checkout master && git push --delete origin release_master",
+    "pre-publish": "git checkout -b release_$(date +%s) && git push -u && npm run version"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
