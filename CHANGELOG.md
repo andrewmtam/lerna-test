@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.9.7](https://github.com/andrewmtam/lerna-test/compare/v10.9.6...v10.9.7) (2020-11-03)
+
+
+### Bug Fixes
+
+* again ([9fb23ea](https://github.com/andrewmtam/lerna-test/commit/9fb23ea9810c613f228a2e3239478c10e223d7ed))
+* broken wokfdlow ([1ee513e](https://github.com/andrewmtam/lerna-test/commit/1ee513ef75f205b79e3e357719780fd352fef97b))
+* fix again ([c55cd81](https://github.com/andrewmtam/lerna-test/commit/c55cd8156e04402d81e08b202a1086eca10580ee))
+* one more ([632b815](https://github.com/andrewmtam/lerna-test/commit/632b8154dd65b970f92ae88ff8f404e9a1008f29))
+* small ([9e2beb5](https://github.com/andrewmtam/lerna-test/commit/9e2beb5917a3582528b6ce2c4b5c1575c4df0e06))
+* test ([eb99728](https://github.com/andrewmtam/lerna-test/commit/eb99728970d758cf38fc14d65d9e841961869aaa))
+* test again ([f3fac0c](https://github.com/andrewmtam/lerna-test/commit/f3fac0c78225c090ff62a7fac2a69b7dacce4074))
+* try this one more time ([55ed2a7](https://github.com/andrewmtam/lerna-test/commit/55ed2a71413850927b9434c19532a2cc0120c3b2))
+
+
+
+
+
 ## [10.9.6](https://github.com/andrewmtam/lerna-test/compare/v10.3.0...v10.9.6) (2020-11-03)
 
 
