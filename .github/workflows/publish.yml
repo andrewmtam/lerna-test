@@ -1,5 +1,8 @@
 name: Publish arc libraries
 
+### Only execute when a PR is closed
+### Further down, we do more filtering to make sure
+### only relevant closed PR's kick off a deploy
 on:
   pull_request:
     types:
@@ -18,10 +21,6 @@ jobs:
           # https://github.com/lerna/lerna/issues/2542
           # pulls all commits (needed for lerna / semantic release to correctly version)
           fetch-depth: "0"
-          ### After merging, we want to checkout the merged branch,
-          ### and tag that (not the merge commit, since things
-          ### may have changed on the target branch)
-          ref: ${{ github.event.pull_request.head.sha }}
       - name: setup node
         uses: actions/setup-node@v1
         with:
