@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/andrewmtam/lerna-test/compare/v10.31.3...v11.0.0) (2020-11-04)
+
+**Note:** Version bump only for package lerna-test-rook
+
+
+
+
+
 # [10.30.0](https://github.com/andrewmtam/lerna-test/compare/v10.29.2...v10.30.0) (2020-11-04)
 
 
