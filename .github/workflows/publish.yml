@@ -1,4 +1,4 @@
-name: Deploy
+name: Publish arc libraries
 
 on:
   pull_request:
@@ -6,9 +6,10 @@ on:
       - closed
 
 jobs:
-  deploy:
+  publish:
     ### Only execute on merged PR
     ### and if the source branch is `release_*`
+    ### (i.e. merging `release_*` into `master`)
     if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'release_')
     runs-on: ubuntu-latest
     steps:
@@ -27,12 +28,11 @@ jobs:
       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
       - run: npm install
       - run: npm run bootstrap
-      - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
       - run: npm run ci:publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      ### We need to manually parse the new version from
+      ### the bumped file
       - name: get published version
         id: version
         uses: notiz-dev/github-action-json-property@release
