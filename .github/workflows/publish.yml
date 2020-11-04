@@ -50,4 +50,6 @@ jobs:
           git config user.email github-actions@github.com
       ### Finally, after publishing, tag the version
       ### We must use an annotated tag in order for lerna's versioning to work properly
-      - run: git tag -a v${{steps.version.outputs.prop}} -m v${{steps.version.outputs.prop}} && git push --tags
+      - run: npm run ci:tag
+        env:
+            TAG: ${{steps.version.outputs.prop}}
