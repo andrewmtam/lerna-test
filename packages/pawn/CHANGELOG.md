@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.31.0](https://github.com/andrewmtam/lerna-test/compare/v10.30.0...v10.31.0) (2020-11-04)
+
+
+### Features
+
+* feat ([c8a4138](https://github.com/andrewmtam/lerna-test/commit/c8a41386aa770310696588d110b16ca8c55b3e86))
+
+
+
+
+
 ## [10.24.2](https://github.com/andrewmtam/lerna-test/compare/v10.24.1...v10.24.2) (2020-11-03)
 
 **Note:** Version bump only for package lerna-test-pawn
