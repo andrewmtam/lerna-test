@@ -4,7 +4,7 @@
   "scripts": {
     "v": "lerna version --no-push --yes",
     "local:version": "lerna version --no-push --yes && git tag -d $(git describe --abbrev=0) && git push && git checkout master",
-    "ci:publish": "lerna publish from-package --yes --no-push && git push --tags && git push",
+    "ci:publish": "lerna publish from-package --yes --no-push",
     "bootstrap": "lerna bootstrap",
     "deploy": "git checkout -b release_master && git push -u && git checkout master && git push --delete origin release_master",
     "test-deploy": "git checkout -b release_master && git push -u && git checkout master && git push --delete origin release_master",
