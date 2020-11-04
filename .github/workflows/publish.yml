@@ -21,6 +21,10 @@ jobs:
           # https://github.com/lerna/lerna/issues/2542
           # pulls all commits (needed for lerna / semantic release to correctly version)
           fetch-depth: "0"
+          ### After merging, we want to checkout the merged branch,
+          ### and tag that (not the merge commit, since things
+          ### may have changed on the target branch)
+          ref: ${{ github.event.pull_request.head.sha }}
       - name: setup node
         uses: actions/setup-node@v1
         with:
@@ -47,8 +51,13 @@ jobs:
       - run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-      ### Finally, after publishing, tag the version
-      ### We must use an annotated tag in order for lerna's versioning to work properly
-      - run: npm run ci:tag
+      ### After publishing, tag the version, for documentation purposes
+      - run: npm run ci:tag:release
+        env:
+            TAG: ${{steps.version.outputs.prop}}
+      ### We also need to tag exactly where in the code
+      ### the release was cut, in order for lerna's versioning to work properly
+      - run: git checkout HEAD~1
+      - run: npm run ci:tag:cut
         env:
             TAG: ${{steps.version.outputs.prop}}

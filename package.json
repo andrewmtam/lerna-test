@@ -9,7 +9,8 @@
     "deploy": "git checkout -b release_master && git push -u && git checkout master && git push --delete origin release_master",
     "test-deploy": "git checkout -b release_master && git push -u && git checkout master && git push --delete origin release_master",
     "local:publish": "git checkout -b release_$(date +%s) && git push -u && npm run local:version",
-    "ci:tag": "git tag -a v$TAG -m v$TAG && git push --tags",
+    "ci:tag:release": "git tag -a v$TAG-release -m v$TAG-release && git push --tags",
+    "ci:tag:cut": "git tag -a v$TAG-cut -m v$TAG-cut && git push --tags",
     "update": "echo '1' >> packages/bishop/lib/bishop.js && git add -u && git commit -m \"fix: fix\""
   },
   "devDependencies": {
